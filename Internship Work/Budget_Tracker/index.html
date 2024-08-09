@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Tracker</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:wght@600&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="inner">
+      <div class="container">
+        <h1 class="title">Personal Budget Tracker</h1>
+        <form id="transaction-form">
+          <input type="number" id="amount" placeholder="Amount" required />
+          <select id="type" required>
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+          </select>
+          <input type="text" id="category" placeholder="Category" required />
+          <button id="submit">Add Transaction</button>
+        </form>
+
+        <div id="summary">
+          <h2 class="subTitle">Summary</h2>
+          <p class="income">
+            Total Income: <span id="total-income">Rs0.00</span>
+          </p>
+          <p class="expense">
+            Total Expense: <span id="total-expenses">Rs0.00</span>
+          </p>
+          <p>Balance: <span id="balance">Rs0.00</span></p>
+        </div>
+
+        <div id="transaction">
+          <h2 class="subTitle">Transactions</h2>
+          <ul id="transaction-list"></ul>
+        </div>
+        <script src="fun.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
